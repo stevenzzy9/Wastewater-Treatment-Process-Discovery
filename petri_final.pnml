@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="end">
+        <name>
+          <text>end</text>
+        </name>
+      </place>
+      <transition id="get review 2">
+        <name>
+          <text>get review 2</text>
+        </name>
+      </transition>
+      <transition id="get review 1">
+        <name>
+          <text>get review 1</text>
+        </name>
+      </transition>
+      <transition id="time-out X">
+        <name>
+          <text>time-out X</text>
+        </name>
+      </transition>
+      <transition id="time-out 3">
+        <name>
+          <text>time-out 3</text>
+        </name>
+      </transition>
+      <transition id="invite reviewers">
+        <name>
+          <text>invite reviewers</text>
+        </name>
+      </transition>
+      <transition id="collect reviews">
+        <name>
+          <text>collect reviews</text>
+        </name>
+      </transition>
+      <transition id="time-out 2">
+        <name>
+          <text>time-out 2</text>
+        </name>
+      </transition>
+      <transition id="time-out 1">
+        <name>
+          <text>time-out 1</text>
+        </name>
+      </transition>
+      <transition id="get review X">
+        <name>
+          <text>get review X</text>
+        </name>
+      </transition>
+      <transition id="reject">
+        <name>
+          <text>reject</text>
+        </name>
+      </transition>
+      <transition id="get review 3">
+        <name>
+          <text>get review 3</text>
+        </name>
+      </transition>
+      <transition id="decide">
+        <name>
+          <text>decide</text>
+        </name>
+      </transition>
+      <transition id="accept">
+        <name>
+          <text>accept</text>
+        </name>
+      </transition>
+      <transition id="invite additional reviewer">
+        <name>
+          <text>invite additional reviewer</text>
+        </name>
+      </transition>
+      <arc id="-9223371898110141352" source="accept" target="end"/>
+      <arc id="-9223371898111527940" source="start" target="invite reviewers"/>
+      <arc id="-9223371898110141340" source="reject" target="end"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="end">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
